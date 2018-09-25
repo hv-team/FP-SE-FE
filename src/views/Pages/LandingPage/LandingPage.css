@@ -19,11 +19,15 @@
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
 }
 
-.app{
-	width: 100%
+.app {
+	width: 100%;
+}
+
+.landing-page {
+  margin-top: 65px;
 }
 
 #part1-1{
@@ -39,7 +43,7 @@ h1{
 	font-family: 'Share', cursive;
 	color: #0c2c52;
 	font-size: 40px;
-	margin-top: 2vh;	
+	margin-top: 2vh;
 }
 
 .btn-light{
@@ -84,7 +88,7 @@ h1{
 		background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
 
 }
 
@@ -201,13 +205,13 @@ h1{
 #part4 h3{
 	color: white;
 	font-size: 50px;
-	font-family: 'Source Sans Pro', sans-serif;	
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 #part4 .col-6{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;	
+	justify-content: center;
 }
 
 #part4 .col-6:first-child{

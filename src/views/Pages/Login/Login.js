@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-import Header from '../../Header/header';
+import Header from '../../../components/Header/Header';
 
 class Login extends Component {
   render() {
@@ -35,7 +35,7 @@ class Login extends Component {
                       </InputGroup>
                       <Row>
                         <Col xs="6">
-                          <Button color="primary" className="px-4">Login</Button>
+                          <Button color="primary" className="px-4" href="/dashboard">Login</Button>
                         </Col>
                         <Col xs="6" className="text-right">
                           <Button color="link" className="px-0">Forgot password?</Button>
@@ -50,7 +50,7 @@ class Login extends Component {
                       <h2>Sign up</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
-                      <Button color="primary" className="mt-3" active  href="/register/">Register Now!</Button>
+                      <Button color="primary" className="mt-3" active  href="/register">Register Now!</Button>
                     </div>
                   </CardBody>
                 </Card>

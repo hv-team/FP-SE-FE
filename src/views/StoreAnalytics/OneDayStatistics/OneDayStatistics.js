@@ -97,6 +97,7 @@ class OneDayStatistics extends Component {
                     focused={this.state.focused}
                     onFocusChange={({focused}) => this.setState({focused})}
                     id="date"
+                    isOutsideRange={() => false}
                   />
                 </div>
               </Col>

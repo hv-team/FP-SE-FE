@@ -102,6 +102,7 @@ class DateRangeStatistics extends Component {
                     onDatesChange={({startDate, endDate}) => this.handleDatesChange(startDate, endDate)}
                     focusedInput={this.state.focusedInput}
                     onFocusChange={focusedInput => this.setState({focusedInput})}
+                    isOutsideRange={() => false}
                   />
                 </div>
               </Col>

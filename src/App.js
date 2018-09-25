@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 // Styles
 // CoreUI Icons Set
@@ -26,16 +26,16 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/login" name="Login Page" component={Login} />
-          <Route
-            exact
-            path="/register"
-            name="Register Page"
-            component={Register}
-          />
+          <Route exact path="/register" name="Register Page" component={Register}/>
           <Route exact path="/404" name="Page 404" component={Page404} />
           <Route exact path="/500" name="Page 500" component={Page500} />
-          <Route path="/" name="Home" component={DefaultLayout} />
-          <Route path="/" name="Home" component={LandingPage} />
+          <Route path="/dashboard" name="Dashboard" component={DefaultLayout} />
+          <Route path="/store-analytics/one-day" name="One Day Statistics" component={DefaultLayout} />
+          <Route path="/store-analytics/date-range" name="One Day Statistics" component={DefaultLayout} />
+          <Route path="/devices" name="Devices" component={DefaultLayout} />
+          <Route path="/users" name="Users" component={DefaultLayout} />
+          <Route exact path="/" name="Landing Page" component={LandingPage} />
+          <Redirect from="/" to="/404" />
         </Switch>
       </BrowserRouter>
     );

@@ -23,4 +23,17 @@
   }
 }
 
+.logo-navbar {
+  height: 50px;
+  width: auto;
+}
 
+#navigation {
+  height: 65px;
+  font-family: 'Share', cursive;
+  font-size: 25px;
+
+  .nav-link {
+    color: #0C2C52 !important;
+  }
+}

@@ -1,7 +1,11 @@
 import React from 'react';
 import Loadable from 'react-loadable'
 
-import DefaultLayout from './containers/DefaultLayout';
+// import DefaultLayout from './containers/DefaultLayout';
+// import OneDayStatistics from './views/StoreAnalytics/OneDayStatistics/OneDayStatistics';
+// import DateRangeStatistics from './views/StoreAnalytics/DateRangeStatistics/DateRangeStatistics';
+// import Dashboard from './views/Dashboard/Dashboard';
+
 
 function Loading() {
   return <div>Loading...</div>;
@@ -16,22 +20,28 @@ const DateRangeStatistics = Loadable({
   loader: () => import('./views/StoreAnalytics/DateRangeStatistics/DateRangeStatistics'),
   loading: Loading,
 });
+
 const Dashboard = Loadable({
   loader: () => import('./views/Dashboard'),
   loading: Loading,
 });
 
-const LandingPage = Loadable({
-  loader: () => import('./views/Pages/LandingPage/LandingPage'),
+const Devices = Loadable({
+  loader: () => import('./views/Settings/Devices/Devices'),
+  loading: Loading,
+});
+
+const Users = Loadable({
+  loader: () => import('./views/Settings/Users/Users'),
   loading: Loading,
 });
 
 const routes = [
-  { path: '/', exact: true, name: 'Home', component: DefaultLayout },
   { path: `/dashboard`, name: 'Dashboard', component: Dashboard },
-  { path: `/landing`, name:`Landing Page`, component: LandingPage},
   { path: `/store-analytics/one-day`, name: 'One Day Statistics', component: OneDayStatistics },
   { path: `/store-analytics/date-range`, name: 'Date Range Statistics', component: DateRangeStatistics },
+  { path: `/devices`, name: 'Devices', component: Devices },
+  { path: `/users`, name: 'Users', component: Users },
 ];
 
 export default routes;

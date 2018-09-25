@@ -7,14 +7,8 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+} from 'reactstrap';
 import logoSvg from '../../assets/img/brand/logo-horizontal.png';
-import './header.css';
-
-
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -34,35 +28,21 @@ export default class Header extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md" id="navigation" className="border-bottom fixed-top">
-          <NavbarBrand href="/landing/">
+          <NavbarBrand href="/">
             <img src= {logoSvg} alt="logo-navbar" className="logo-navbar"/>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/landing/">Home</NavLink>
+                <NavLink href="/login">Sign in</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">About Us</NavLink>
+                <NavLink disabled={true}>or</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem href="/login/">
-                    Log In
-                  </DropdownItem>
-                  <DropdownItem href="/register/">
-                    Register
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="/register">Sign up</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
