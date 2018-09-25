@@ -34,8 +34,6 @@ class DefaultHeader extends Component {
             <DropdownMenu right style={{ right: 'auto' }}>
               <DropdownItem header tag="div" className="text-center"><strong>Settings</strong></DropdownItem>
               <DropdownItem><i className="fa fa-user"/> Profile</DropdownItem>
-              <DropdownItem><i className="fa fa-wrench"/> Settings</DropdownItem>
-              <DropdownItem divider />
               <DropdownItem><i className="fa fa-lock"/> Logout</DropdownItem>
             </DropdownMenu>
           </AppHeaderDropdown>

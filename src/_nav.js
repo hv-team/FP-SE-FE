@@ -25,39 +25,17 @@ export default {
     },
     {
       title: true,
-      name: 'Extras',
+      name: 'Settings',
     },
     {
-      name: 'Pages',
-      url: '/pages',
-      icon: 'icon-heart',
-      children: [
-        {
-          name: 'Login',
-          url: '/login',
-          icon: 'icon-heart',
-        },
-        {
-          name: 'Register',
-          url: '/register',
-          icon: 'icon-heart',
-        },
-        {
-          name: 'Error 404',
-          url: '/404',
-          icon: 'icon-heart',
-        },
-        {
-          name: 'Error 500',
-          url: '/500',
-          icon: 'icon-heart',
-        },
-        {
-          name: 'Landing Page',
-          url: '/landing',
-          icon: 'icon-heart',
-        },
-      ],
+      name: 'Devices',
+      url: '/devices',
+      icon: 'icon-camrecorder',
     },
+    {
+      name: 'Users',
+      url: '/users',
+      icon: 'icon-people',
+    }
   ],
 };

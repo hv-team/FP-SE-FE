@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-import Header from '../../Header/header';
+import { Button, Card, CardBody, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import Header from '../../../components/Header/Header';
 
 class Register extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      section: 1
+    }
+  }
+
   render() {
     return (
-      <div>
+      <React.Fragment>
       <Header />
-      <div className="app flex-row align-items-center" style={{paddingTop: '10em'}}>
+      <div className="app flex-row align-items-center" style={{paddingTop: '16em'}}>
         <Container>
           <Row className="justify-content-center">
             <Col md="6">
@@ -22,23 +30,7 @@ class Register extends Component {
                           <i className="icon-heart"/>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="text" placeholder="Name" autoComplete="name" />
-                    </InputGroup>
-                    <InputGroup className="mb-3">
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="icon-home"/>
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input type="text" placeholder="Address" autoComplete="address" />
-                    </InputGroup>
-                    <InputGroup className="mb-3">
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="icon-phone"/>
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input type="text" placeholder="Phone Number" autoComplete="phone-number" />
+                      <Input type="text" placeholder="Your Name" autoComplete="name" />
                     </InputGroup>
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
@@ -70,6 +62,40 @@ class Register extends Component {
                       </InputGroupAddon>
                       <Input type="password" placeholder="Repeat password" autoComplete="new-password" />
                     </InputGroup>
+                    <p className="text-muted">Company's Profile</p>
+                    <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-heart"/>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Name" autoComplete="name" />
+                    </InputGroup>
+                    <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-home"/>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Address" autoComplete="address" />
+                    </InputGroup>
+                    <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-phone"/>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Phone Number" autoComplete="phone-number" />
+                    </InputGroup>
+                    <p className="text-muted">Enter your device code</p>
+                    <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="icon-camrecorder"/>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Device Code" autoComplete="name" />
+                    </InputGroup>
                     <Button color="success" block>Create Account</Button>
                   </Form>
                 </CardBody>
@@ -78,7 +104,7 @@ class Register extends Component {
           </Row>
         </Container>
       </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
